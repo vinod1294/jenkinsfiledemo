@@ -1,10 +1,10 @@
-pipeline {
-    agent any
+node() {
+    
 
     stages {
 	  echo "branch name  ${env.JOB_NAME}"
 	 // (env.BRANCH_NAME == 'develop'
-	  if(env.JOB_NAME == 'jenkinsfile-jobname'){
+	  if("${env.JOB_NAME}" == 'jenkinsfile-jobname'){
         stage ('Compile Stage') {
 
             steps {
