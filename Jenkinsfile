@@ -1,5 +1,5 @@
-node() {
-    
+pipeline {
+    agent any
 
     stages {
 	  echo "branch name  ${env.JOB_NAME}"
