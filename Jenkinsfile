@@ -2,9 +2,6 @@ pipeline {
     agent any
 
     stages {
-	  echo "branch name  ${env.JOB_NAME}"
-	 // (env.BRANCH_NAME == 'develop'
-	  if("${env.JOB_NAME}" == 'jenkinsfile-jobname'){
         stage ('Compile Stage') {
 
             steps {
@@ -12,7 +9,7 @@ pipeline {
                     bat 'mvn clean compile'
               //  }
             }
-        }}
+        }
 
         stage ('Testing Stage') {
 
