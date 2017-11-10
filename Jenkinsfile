@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 	  echo "branch name  ${env.JOB_NAME}"
-	  (env.BRANCH_NAME == 'develop'
+	 // (env.BRANCH_NAME == 'develop'
 	  if(env.JOB_NAME == 'jenkinsfile-jobname'){
         stage ('Compile Stage') {
 
