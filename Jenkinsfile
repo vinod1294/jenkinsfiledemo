@@ -5,7 +5,7 @@ node()
 		String str = "devejjlop"
     	stage 'Select Build type1'
     	
-    	//Feature branch
+    	//Feature branch added
 	    if ("${env.JOB_NAME}" == 'pileline-abdul') 
 			{
 			 print "Building the abdul branch "
