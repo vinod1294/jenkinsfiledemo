@@ -8,7 +8,10 @@ pipeline {
                // withMaven(maven : 'maven3.3.9') {
                     bat 'mvn clean compile'
               //  }
-            }
+
+			  
+			  // Added new comment
+			}
         }
 
         stage ('Testing Stage') {
