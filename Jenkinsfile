@@ -7,7 +7,7 @@ pipeline {
             steps {
                 //withMaven(maven : 'maven3.3.9') {
                     bat 'mvn clean compile'
-               }
+            //   }
 
 			  
 			  // Added new comment
@@ -20,7 +20,7 @@ pipeline {
             steps {
                // withMaven(maven : 'maven3.3.9') {
                     bat  'mvn test'
-                }
+               // }
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
             steps {
               //  withMaven(maven : 'maven3.3.9') {
                     bat 'mvn install'
-                }
+               // }
             }
         }
     }
