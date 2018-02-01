@@ -5,17 +5,26 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-              //  withMaven(maven : 'maven_3_5_0') {
+                //withMaven(maven : 'maven3.5.0') {
+		     
+		    bat 'set M2_HOME=C:\software\maven\apache-maven-3.5.0'
+		    bat "set path =C:\software\maven\apache-maven-3.5.0\bin"
+		    bat 'mvn -version'
                     bat 'mvn clean compile'
-               // }
-            }
+            //   }
+
+			  
+			  // Added new comment
+		    // added new line
+			}
         }
 
         stage ('Testing Stage') {
 
             steps {
-               // withMaven(maven : 'maven_3_5_0') {
-                    bat 'mvn test'
+               // withMaven(maven : 'maven3.5.0') {
+                    
+		    bat  'mvn test'
                // }
             }
         }
@@ -23,9 +32,9 @@ pipeline {
 
         stage ('Deployment Stage') {
             steps {
-               // withMaven(maven : 'maven_3_5_0') {
+              //  withMaven(maven : 'maven3.5.0') {
                     bat 'mvn install'
-              //  }
+               // }
             }
         }
     }
