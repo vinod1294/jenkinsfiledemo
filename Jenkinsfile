@@ -10,7 +10,7 @@ pipeline {
 		    bat 'set M2_HOME=C:\software\maven\apache-maven-3.5.0'
 		    bat "set path =C:\software\maven\apache-maven-3.5.0\bin"
 		    bat 'mvn -version'
-                    bat 'mvn clean compile'
+                    bat 'mvn compile'
             //   }
 
 			  
@@ -30,7 +30,7 @@ pipeline {
         }
 
 
-        stage ('Deployment Stage') {
+        stage ('Install Stage') {
             steps {
               //  withMaven(maven : 'maven3.5.0') {
                     bat 'mvn install'
