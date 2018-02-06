@@ -28,10 +28,10 @@ pipeline {
         }
 
 
-        stage ('Install Stage') {
+        stage ('compile Stage') {
             steps {
               //  withMaven(maven : 'maven3.5.0') {
-                    bat 'mvn install'
+                    bat 'mvn compile'
                // }
             }
         }
